@@ -1,22 +1,30 @@
-import java.util.*;                          // Collections classes use karne ke liye
+package com.example.Simpleecommerceapp.DSA_Questions.String_Questions;
+
+import java.util.*;                               // Import utility classes
 
 public class FirstNonRepeating {
     public static void main(String[] args) {
 
-        String s = "swiss";                  // Input string
+        String s = "swiss";                       // Input string
 
+        // LinkedHashMap stores characters with their frequency
+        // and maintains insertion order
         Map<Character, Integer> map =
-                new LinkedHashMap<>();       // LinkedHashMap: order maintain + frequency store
+                new LinkedHashMap<>();
 
-        for (char c : s.toCharArray())       // String ko characters me convert karke loop
-            map.put(c,                       // Character ko key ke roop me store
-                    map.getOrDefault(c, 0)   // Agar key exist karti hai to count lo,
-                    + 1);                    // nahi karti to 0 leke +1 kar do
+        // Count frequency of each character
+        for (char c : s.toCharArray()) {          // Convert string to char array
+            map.put(
+                c,                                // Character as key
+                map.getOrDefault(c, 0) + 1        // Get existing count or 0, then increment
+            );
+        }
 
-        for (Map.Entry<Character, Integer> e : map.entrySet()) { // Map ko insertion order me traverse
-            if (e.getValue() == 1) {          // Jo character sirf 1 baar aaya
-                System.out.println(e.getKey()); // Wahi first non-repeating character print
-                break;                        // Sirf FIRST chahiye, isliye loop stop
+        // Find the first character with frequency 1
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            if (e.getValue() == 1) {               // Check non-repeating character
+                System.out.println(e.getKey());   // Print first non-repeating character
+                break;                            // Stop after first match
             }
         }
     }

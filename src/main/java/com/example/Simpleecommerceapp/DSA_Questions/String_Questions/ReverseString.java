@@ -3,7 +3,7 @@ package com.example.Simpleecommerceapp.DSA_Questions.String_Questions;
 public class ReverseString {
         public static void main(String[] args) {
             
-            String str = "hello";
+            String str = "Java is fun";
             char[] ch = str.toCharArray();
 
             int left = 0;
