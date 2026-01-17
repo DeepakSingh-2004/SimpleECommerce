@@ -1,4 +1,4 @@
-package com.example.Simpleecommerceapp.Controller1;
+package com.example.Simpleecommerceapp.LoginController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

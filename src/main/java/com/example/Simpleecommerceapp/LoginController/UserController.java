@@ -1,4 +1,4 @@
-package com.example.Simpleecommerceapp.Controller1;
+package com.example.Simpleecommerceapp.LoginController;
 
 import com.example.Simpleecommerceapp.Entity1.UserEntity;
 import com.example.Simpleecommerceapp.Repository1.UserRepo;
